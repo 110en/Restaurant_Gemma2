@@ -19,7 +19,7 @@ class Llm:
         return name.content
     
     def menu_gen(self, name, cuisine):
-        prompt_menu = PromptTemplate.from_template("Suggest some menu items for {rest_name}, which is a {cuisine} type restaurant. Return it as a comma separated list.")
+        prompt_menu = PromptTemplate.from_template("Suggest some menu items for {rest_name}, which is a {cuisine} type restaurant. Return it as a bulletpoint list containing options for a 3-course meal.")
         chain_menu = prompt_menu | self.llm
         menu = chain_menu.invoke(input = {"rest_name" : name, "cuisine" : cuisine})
         return  menu.content
