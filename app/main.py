@@ -9,5 +9,5 @@ ai = Llm()
 if submit_button:
     name = ai.name_gen(cuisine)
     menu = ai.menu_gen(name, cuisine)
-    restaurant = name + "\n" + menu.split(",")
+    restaurant = name + "\n" + menu
     st.code(restaurant, language = "markdown")
