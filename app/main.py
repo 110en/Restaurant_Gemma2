@@ -7,5 +7,7 @@ cuisine = st.sidebar.text_input("Pick a Cuisine", value = "Iranian")
 submit_button = st.sidebar.button("Enter")
 
 if submit_button:
-    restaurant = Llm.menu_gen(Llm.name_gen(cuisine))
+    name = Llm.name_gen(cuisine)
+    menu = Llm.menu_gen(name, cuisine)
+    restaurant = name + "\n" + menu
     st.code(restaurant, langauge = "markdown")
