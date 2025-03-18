@@ -6,3 +6,10 @@ The user inputs a cuisine type (e.g. Mexican, Italian) in which the llm then tak
 Note: Due to the temperature being set to 0.7, rerunning the application can lead to slight different results every time. You can change this setting in llm.py.
 
 For it to work, in the command prompt type: streamlit run <path to main.py>. If for whatever reason command prompt doesn't allow streamlit commands, use: python -m streamlit run <path to main.py>.
+
+Packages used in this program (not necessarily exhaustive):
+- streamlit
+- langchain
+    - _core
+    - _groq
+- python-dotenv
